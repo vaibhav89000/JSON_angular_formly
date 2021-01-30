@@ -11,52 +11,10 @@ import { ServiceService } from './servies/service.service';
 export class AppComponent implements OnInit {
   title = 'formly';
 
-  // form: FormGroup;
-  options: FormlyFormOptions = {};
-  // model: any;
-  // fields: FormlyFieldConfig[];
 
-  form = new FormGroup({});
-  model: any = { };
-  fields: FormlyFieldConfig[] = [
-    {
-      key: 'FirstName',
-      type: 'input',
-      templateOptions: {
-        label: 'First Name',
-        placeholder: 'First Name',
-        required: false,
-        minLength: 3,
-        maxLength: 20
-      },
-    },
-    {
-      key: 'LastName',
-      type: 'input',
-      templateOptions: {
-        label: 'Last Name',
-        placeholder: 'Last Name',
-        required: false,
-        minLength: 3,
-        maxLength: 20
-      },
-    },
-    {
-      key: 'PhoneNumber',
-      type: 'input',
-      templateOptions: {
-        label: 'Phone Number',
-        placeholder: 'Phone Number',
-        type: 'Number',
-        required: false,
-      },
-    }
-  ];
 
   constructor(private service: ServiceService){
-    this.service.getdata().subscribe((res)=>{
-      console.log('res',res);
-    })
+
   }
 
 
@@ -64,8 +22,5 @@ export class AppComponent implements OnInit {
 
   }
 
-  submit(){
-    console.log(this.model);
-  }
 
 }

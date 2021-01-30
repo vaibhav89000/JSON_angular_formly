@@ -1,42 +1,35 @@
 [
   {
-    "key": "firstName",
+    "key": "FirstName",
     "type": "input",
     "templateOptions": {
-      "label": "First Name"
+      "label": "First Name",
+      "placeholder": "First Name",
+      "required": false,
+      "minLength": 3,
+      "maxLength": 20
     }
   },
   {
-    "key": "lastName",
+    "key": "LastName",
     "type": "input",
     "templateOptions": {
-      "label": "Last Name"
+      "label": "Last Name",
+      "placeholder": "Last Name",
+      "required": false,
+      "minLength": 3,
+      "maxLength": 20
     }
   },
   {
-    "key": "mac",
+    "key": "PhoneNumber",
     "type": "input",
     "templateOptions": {
-      "label": "Mac Address",
-      "pattern": "([0-9A-F]{2}[:-]){5}([0-9A-F]{2})"
+      "label": "Phone Number",
+      "placeholder": "Phone Number",
+      "type": "Number",
+      "required": false
     }
-  },
-  {
-    "key": "color",
-    "type": "input",
-    "templateOptions": {
-      "label": "Color Preference (try this out)"
-    }
-  },
-  {
-    "key": "reason",
-    "type": "textarea",
-    "templateOptions": {
-      "label": "Why?"
-    },
-    "expressionProperties": {
-      "templateOptions.label": "'Why did you choose ' + model.color + '?'"
-    },
-    "hideExpression": "!model.color"
   }
+
 ]

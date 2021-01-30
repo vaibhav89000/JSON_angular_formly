@@ -8,10 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { FormlyJsonComponent } from './formly-json/formly-json.component';
+import { FormlyComponent } from './formly/formly.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormlyJsonComponent,
+    FormlyComponent
   ],
   imports: [
     BrowserModule,

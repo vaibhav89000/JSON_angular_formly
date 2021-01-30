@@ -1,13 +1,22 @@
-<div class="container">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
 
-  <form [formGroup]="form" (ngSubmit)="submit()">
-    <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
-    <button type="submit" class="btn btn-primary submit-button">Submit</button>
-  </form>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['formly']">Formly
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item" [routerLink]="['json-formly']">
+        <a class="nav-link" >Formly using json</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
 
 
-
-</div>
 
 <router-outlet></router-outlet>
