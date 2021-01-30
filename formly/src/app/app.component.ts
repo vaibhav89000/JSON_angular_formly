@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
+import { ServiceService } from './servies/service.service';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,8 @@ export class AppComponent implements OnInit {
         label: 'First Name',
         placeholder: 'First Name',
         required: false,
+        minLength: 3,
+        maxLength: 20
       },
     },
     {
@@ -34,19 +37,27 @@ export class AppComponent implements OnInit {
         label: 'Last Name',
         placeholder: 'Last Name',
         required: false,
+        minLength: 3,
+        maxLength: 20
       },
     },
     {
       key: 'PhoneNumber',
       type: 'input',
       templateOptions: {
-        label: 'PhoneNumber',
+        label: 'Phone Number',
         placeholder: 'Phone Number',
         type: 'Number',
         required: false,
       },
     }
   ];
+
+  constructor(private service: ServiceService){
+    this.service.getdata().subscribe((res)=>{
+      console.log('res',res);
+    })
+  }
 
 
   ngOnInit(){
