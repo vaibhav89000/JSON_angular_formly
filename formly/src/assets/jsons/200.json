@@ -1,35 +1,120 @@
 [
   {
-    "key": "FirstName",
-    "type": "input",
-    "templateOptions": {
-      "label": "First Name",
-      "placeholder": "First Name",
-      "required": false,
-      "minLength": 3,
-      "maxLength": 20
-    }
+    "className": "section-label",
+    "template": "<div><strong>Personal details:</strong></div"
   },
   {
-    "key": "LastName",
-    "type": "input",
-    "templateOptions": {
-      "label": "Last Name",
-      "placeholder": "Last Name",
-      "required": false,
-      "minLength": 3,
-      "maxLength": 20
-    }
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-6",
+        "key": "FirstName",
+        "type": "input",
+        "templateOptions": {
+          "label": "First Name",
+          "placeholder": "First Name",
+          "required": false,
+          "minLength": 3,
+          "maxLength": 20
+        }
+      },
+      {
+        "className": "col-6",
+        "key": "LastName",
+        "type": "input",
+        "templateOptions": {
+          "label": "Last Name",
+          "placeholder": "Last Name",
+          "required": false,
+          "minLength": 3,
+          "maxLength": 20
+        }
+      }
+    ]
   },
   {
-    "key": "PhoneNumber",
-    "type": "input",
-    "templateOptions": {
-      "label": "Phone Number",
-      "placeholder": "Phone Number",
-      "type": "Number",
-      "required": false
-    }
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-6",
+        "key": "PhoneNumber",
+        "type": "input",
+        "templateOptions": {
+          "label": "Phone Number",
+          "placeholder": "Phone Number",
+          "type": "Number",
+          "required": false
+        }
+      },
+      {
+        "className": "col-6",
+        "key": "gender",
+        "type": "select",
+        "templateOptions": {
+          "label": "Gender",
+          "placeholder": "Gender",
+          "options": [
+            {
+              "label": "Male",
+              "value": "M"
+            },
+            {
+              "label": "Female",
+              "value": "F"
+            }
+          ],
+          "required": false
+        }
+      }
+    ]
+  },
+
+  {
+    "className": "section-label",
+    "template": "<br><div><strong>Address:</strong></div"
+  },
+  {
+    "fieldGroupClassName": "row",
+    "fieldGroup": [
+      {
+        "className": "col-4",
+        "key": "state",
+        "type": "input",
+        "templateOptions": {
+          "label": "State",
+          "placeholder": "State",
+          "required": false,
+          "minLength": 3,
+          "maxLength": 20
+        }
+      },
+      {
+        "className": "col-4",
+        "key": "city",
+        "type": "input",
+        "templateOptions": {
+          "label": "City",
+          "placeholder": "City",
+          "required": false,
+          "minLength": 3,
+          "maxLength": 20
+        }
+      },
+      {
+        "className": "col-4",
+        "key": "zipcode",
+        "type": "input",
+        "templateOptions": {
+          "label": "Zip Code",
+          "placeholder": "Zip Code",
+          "type": "number",
+          "required": false,
+          "minLength": 3,
+          "maxLength": 20
+        }
+      }
+    ]
   }
+
 
 ]

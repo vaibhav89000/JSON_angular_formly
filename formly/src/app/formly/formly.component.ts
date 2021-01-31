@@ -54,9 +54,7 @@ export class FormlyComponent implements OnInit {
   ];
 
   constructor(private service: ServiceService){
-    this.service.getdata().subscribe((res)=>{
-      console.log('res',res);
-    })
+
   }
 
 
